@@ -1,0 +1,1320 @@
+<!DOCTYPE html>
+ <html lang="pt-BR">
+
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+    
+    .btn-ajuda-maxima{
+        background-color: #0987D2;
+        color: white;
+        align-items: center;
+        cursor: pointer;
+        border: 1px solid white;
+        border-radius: 10px;
+        padding: 5px;
+        width: 100%;
+        font-weight: bold;
+        
+    }
+
+    .valor-total-doado{
+    		    color: #11c811;
+    		    font-weight: 700;
+    		}
+    		
+    		.pulse {
+        display: inline-block;
+        animation: pulse-animation 1.5s infinite;
+        transition: transform 0.3s ease-in-out;
+    }
+    
+    @keyframes pulse-animation {
+        0% {
+            transform: scale(1);
+            opacity: 1;
+        }
+        50% {
+            transform: scale(1.1);
+            opacity: 0.7;
+        }
+        100% {
+            transform: scale(1);
+            opacity: 1;
+        }
+    }
+    
+      
+    </style>
+
+    <script>
+  window.pixelId = "67e7607bd6c4df1cbc50d2cd";
+  var a = document.createElement("script");
+  a.setAttribute("async", "");
+  a.setAttribute("defer", "");
+  a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
+  document.head.appendChild(a);
+</script>
+
+<!-- Meta Pixel Code -->
+	 <script>
+		! function(f, b, e, v, n, t, s) {
+			if(f.fbq) return;
+			n = f.fbq = function() {
+				n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+			};
+			if(!f._fbq) f._fbq = n;
+			n.push = n;
+			n.loaded = !0;
+			n.version = '2.0';
+			n.queue = [];
+			t = b.createElement(e);
+			t.async = !0;
+			t.src = v;
+			s = b.getElementsByTagName(e)[0];
+			s.parentNode.insertBefore(t, s)
+		}(window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
+		fbq('init', '1747748246091186');
+		fbq('track', 'PageView');
+	
+		</script>
+		<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1747748246091186&ev=PageView&noscript=1" /></noscript>
+		<!-- End Meta Pixel Code -->
+
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>Salve vidas através da sua bondade | Vaquinhas Online</title>
+	<meta name="description">
+	<meta name="keywords">
+	<meta name="author" content="Vakinha Online">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="theme-color" content="#FFFFFF">
+	<meta name="apple-mobile-web-app-status-bar-style" content="#FFFFFF">
+	<meta name="msapplication-navbutton-color" content="#FFFFFF">
+	<meta property="og:title">
+	<meta property="og:description">
+	<meta property="og:url" content="#">
+	<meta property="og:type" content="website">
+	<meta property="og:image" content="images/img1.webp">
+	<meta name="msapplication-TileImage" content="images/favicon.ico">
+	<link rel="stylesheet" href="index_files/swiper-bundle.min.css">
+	<link href="index_files/bootstrap.min.css" rel="stylesheet">
+	<link href="index_files/style.css" rel="stylesheet">
+	<!-- Facebook Pixel Code -->
+
+	<style type="text/css" id="operaUserStyle"></style>
+	<style>
+		/* Estilização do Botão Fechar */
+		.fechar-modal {
+        position: absolute;
+        top: 10px;
+        right: 15px;
+        background: none;
+        border: none;
+        font-size: 24px;
+        cursor: pointer;
+        color: white;
+    }
+    
+    .fechar-modal:hover {
+        color: white;
+    }
+
+
+		  /* Overlay preto */
+		  #overlay-doador {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            display: none;
+            justify-content: center;
+            align-items: center;
+			z-index: 9;
+			font-family: 'Poppins';
+
+        }
+
+        /* Estilização do Modal */
+        #modal-doador {
+            background: white;
+            width: 90%;
+            max-width: 400px;
+            padding: 20px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            font-family: Arial, sans-serif;
+        }
+
+        /* Ícone do coração */
+        .icon {
+            font-size: 5px;
+            color: red;
+        }
+
+        /* Texto do modal */
+        .modal-text {
+            font-size: 16px;
+            margin: 15px 0;
+			font-family: "Poppins";
+        }
+
+        .bold {
+            font-weight: bold;
+        }
+
+        .highlight {
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        /* Botões */
+        .btn {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            border-radius: 8px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 16px;
+            margin-top: 10px;
+            cursor: pointer;
+            border: none;
+        }
+
+        .btn-primary {
+            background-color: #10c44c;
+            color: white;
+        }
+
+        .btn-secondary {
+            color: #10c44c;
+            text-decoration: underline;
+            background: none;
+        }
+		</style>
+			<style>
+	    #notifications-container {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 10px;
+  z-index: 9999;
+}
+
+.notification {
+  display: flex;
+  align-items: center;
+  background: white;
+  border-radius: 25px;
+  padding: 10px 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  animation: slideIn 0.4s ease, fadeOut 0.5s ease 3.5s forwards;
+  font-family: sans-serif;
+  border: 1px solid #e2e2e2;
+}
+
+.notification img {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.notification .text {
+  display: flex;
+  flex-direction: column;
+}
+
+.notification .text .name {
+  color: #1abc9c;
+  font-weight: bold;
+}
+
+.notification .text .message {
+  font-size: 14px;
+  color: #333;
+}
+
+@keyframes slideIn {
+  from { transform: translateX(-100%); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes fadeOut {
+  to { opacity: 0; transform: translateX(-20%); }
+}
+
+	</style>
+	<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+	<style>
+    .gerando-contribuicao {
+        position: fixed; /* Fixa a div em relação à viewport */
+        top: 0; /* Alinha ao topo da viewport */
+        left: 0; /* Alinha à esquerda da viewport */
+        width: 100%; /* Largura total */
+        height: 100vh; /* Altura total da viewport */
+        margin: 0px;
+        display: none; /* Inicia oculta */
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: white;
+        z-index: 1000; /* Garante que esteja no topo */
+    }
+
+    .spinner-loading {
+        border: 16px solid #f3f3f3; /* Cor de fundo */
+        border-top: 16px solid #0987D2; /* Cor do spinner */
+        border-radius: 50%;
+        width: 80px;
+        height: 80px;
+        animation: spin 2s linear infinite;
+    }
+
+    @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+    }
+
+    .gerando-contribuicao h3 {
+        font-size: 15pt;
+        text-align: center;
+        color: #0987D2;
+        margin-top: 20px; /* Espaço entre o spinner e o texto */
+    }
+
+    .img-logo {
+        width: 100px;
+        margin-top: 50px;
+    }
+
+    .logo-div {
+        display: flex;
+        justify-content: center; /* Centraliza a logo horizontalmente */
+        width: 100%; /* Faz a div ocupar a largura toda */
+    }
+</style>
+
+</head>
+
+<body>
+	
+<div class="gerando-contribuicao">
+		<div class="spinner-loading">
+
+		</div>
+
+		<h3>Gerando sua contribuição</h3>
+		<div class="logo-div">
+			<img class="img-logo" src="index_files/8666ff28cfc3e06ca4470e2d53381b1918f346bc.png"/>
+
+		</div>
+ 		
+	</div>
+
+	<!-- Overlay e Modal -->
+<div id="overlay-doador">
+    <div id="modal-doador">
+        <!-- Botão Fechar -->
+        <button id="fechar-modal" class="fechar-modal">&times;</button>
+
+        <div class="icon">
+            <svg fill="#FF3E3E" style="max-height: 50px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path d="M24,6v10.101c0,2.137-.832,4.146-2.343,5.657l-1.95,1.95c-.195.195-.451.293-.707.293s-.512-.098-.707-.293c-.391-.391-.391-1.023,0-1.414l1.95-1.95c1.133-1.133,1.757-2.64,1.757-4.243V6c0-.551-.449-1-1-1s-1,.449-1,1v8.067c-.015.662-.239,1.32-.688,1.856l-2.578,2.684c-.196.205-.458.307-.721.307-.25,0-.499-.093-.693-.279-.398-.383-.411-1.016-.028-1.414l2.533-2.634c.13-.157.191-.368.188-.585v-.002v-.044c-.013-.221-.095-.446-.254-.624-.367-.409-.998-.444-1.406-.077l-3.163,2.911c.53,1.001.824,2.124.824,3.276v3.559c0,.552-.448,1-1,1s-1-.448-1-1v-3.559c0-1.395-.588-2.735-1.615-3.68l-2.734-2.516c-.398-.357-1.03-.324-1.397.086-.328.367-.337.928-.021,1.305l2.57,2.671c.383.398.371,1.031-.028,1.414-.396.383-1.031.372-1.414-.028l-2.616-2.721c-.46-.547-.693-1.2-.723-1.854-.005-.04-.024-8.118-.024-8.118,0-.551-.449-1-1-1s-1,.449-1,1v10.101c0,1.603.624,3.109,1.757,4.243l1.95,1.95c.391.391.391,1.023,0,1.414-.195.195-.451.293-.707.293s-.512-.098-.707-.293l-1.95-1.95c-1.511-1.511-2.343-3.52-2.343-5.657V6c0-1.654,1.346-3,3-3s3,1.346,3,3v5.186c.999-.352,2.152-.176,2.996.579l2.744,2.525c.087.08.164.168.247.252l3.008-2.768c.851-.762,2.006-.939,3.005-.587v-5.186c0-1.654,1.346-3,3-3s3,1.346,3,3Z"></path>
+            </svg>
+        </div>
+
+        <p class="modal-text">
+            Por apenas <span class="bold" id="valor-adicional">R$20</span> a mais, você pode ajudar ainda mais a 
+            <span class="highlight">Lucas a se aproximar da cura!</span>
+        </p>
+        <p style="font-family: Poppins" id="mensagem-doacao">Considere doar R$50 e fazer ainda mais diferença.</p>
+        <a style="font-family: Poppins; font-weight: bold; background-color:#10c44c" id="botao-doacao-extra" class="btn btn-primary elementoGeracao" href="gerar-pix.php@value=50.html">SIM, QUERO DOAR R$50</a>
+        <a style="font-family: Poppins; color: rgb(0, 157, 78);" id="botao-doacao-manutencao" class="btn btn-secondary elementoGeracao"  href="gerar-pix.php@value=30.html">Quero continuar doando R$30</a>
+    </div>
+</div>
+
+<div id="notifications-container"></div>
+<script>
+const notifications = [
+  {
+    name: "Aline Rocha",
+    amount: "R$ 150,00",
+    photo: "fotos-notificacoes/1.jfif" // Troque pelo caminho real da imagem do doador
+  },
+  {
+    name: "Camila Fernandes",
+    amount: "R$ 70,00",
+    photo: "fotos-notificacoes/2.jfif" // Troque pelo caminho real da imagem do doador
+  },
+  {
+    name: "Bianca Martins",
+    amount: "R$ 50,00",
+    photo: "fotos-notificacoes/3.jfif" // Troque pelo caminho real da imagem do doador
+  },
+  {
+    name: "Patrícia Silva",
+    amount: "R$ 200,00",
+    photo: "fotos-notificacoes/5.webp" // Troque pelo caminho real da imagem do doador
+  },
+  {
+    name: "Renata Lima",
+    amount: "R$ 50,00",
+    photo: "fotos-notificacoes/6.jpg" // Troque pelo caminho real da imagem do doador
+  },
+  {
+    name: "Larissa Almeida",
+    amount: "R$ 70,00",
+    photo: "fotos-notificacoes/7.jpg" // Troque pelo caminho real da imagem do doador
+  },
+  {
+    name: "Natália Ribeiro",
+    amount: "R$ 200,00",
+    photo: "fotos-notificacoes/8.jpg" // Troque pelo caminho real da imagem do doador
+  },
+  {
+    name: "Gabriela Duarte",
+    amount: "R$ 100,00",
+    photo: "fotos-notificacoes/9.jpg" // Troque pelo caminho real da imagem do doador
+  },
+  {
+    name: "Mariana Torres",
+    amount: "R$ 50,00",
+    photo: "fotos-notificacoes/10.jpg" // Troque pelo caminho real da imagem do doador
+  },
+  {
+    name: "Ana Paula Mendes",
+    amount: "R$ 50,00",
+    photo: "fotos-notificacoes/11.jfif" // Troque pelo caminho real da imagem do doador
+  },
+  {
+    name: "Carolina Vasconcelos",
+    amount: "R$ 50,00",
+    photo: "fotos-notificacoes/12.webp" // Troque pelo caminho real da imagem do doador
+  },
+  {
+    name: "Vanessa Barros",
+    amount: "R$ 40,00",
+    photo: "fotos-notificacoes/13.jpg" // Troque pelo caminho real da imagem do doador
+  },
+  {
+    name: "Simone Oliveira",
+    amount: "R$ 50,00",
+    photo: "fotos-notificacoes/14.jfif" // Troque pelo caminho real da imagem do doador
+  },
+  {
+    name: "Letícia Nunes",
+    amount: "R$ 50,00",
+    photo: "fotos-notificacoes/16.jfif" // Troque pelo caminho real da imagem do doador
+  },
+  {
+    name: "Tatiane Freitas",
+    amount: "R$ 100,00",
+    photo: "fotos-notificacoes/17.jpg" // Troque pelo caminho real da imagem do doador
+  },
+  {
+    name: "Thaís Gomes",
+    amount: "R$ 50,00",
+    photo: "fotos-notificacoes/20.jfif" // Troque pelo caminho real da imagem do doador
+  },
+  {
+    name: "Isabela Monteiro",
+    amount: "R$ 150,00",
+    photo: "fotos-notificacoes/21.jfif" // Troque pelo caminho real da imagem do doador
+  },
+ 
+  {
+    name: "Lucas Ferreira",
+    amount: "R$ 50,00",
+    photo: "fotos-notificacoes/23.jfif" // Troque pelo caminho real da imagem do doador
+  },
+  {
+    name: "Daniel Vasques",
+    amount: "R$ 100,00",
+    photo: "fotos-notificacoes/24.jpg" // Troque pelo caminho real da imagem do doador
+  },
+  {
+    name: "Ricardo Moura",
+    amount: "R$ 50,00",
+    photo: "fotos-notificacoes/26.jpg" // Troque pelo caminho real da imagem do doador
+  },
+  {
+    name: "Felipe Andrade",
+    amount: "R$ 50,00",
+    photo: "fotos-notificacoes/27.jfif" // Troque pelo caminho real da imagem do doador
+  },
+  {
+    name: "Carlos Henrique",
+    amount: "R$ 50,00",
+    photo: "fotos-notificacoes/28.jpg" // Troque pelo caminho real da imagem do doador
+  },
+  // Adicione mais objetos aqui para simular diferentes doações
+];
+
+function showNotification(donation) {
+  const container = document.getElementById("notifications-container");
+
+  const notification = document.createElement("div");
+  notification.className = "notification";
+
+  notification.innerHTML = `
+    <img src="${donation.photo}.html" alt="${donation.name}" />
+    <div class="text">
+      <span class="name">${donation.name}</span>
+      <span class="message">Acabou de doar ${donation.amount}.</span>
+    </div>
+  `;
+
+  container.appendChild(notification);
+
+  // Atualiza todos os totais doados
+  updateAllTotalDonatedDisplays(donation.amount);
+
+  // Disparar confetes
+  confetti({
+    particleCount: 80,
+    spread: 60,
+    origin: { y: 0.9 }
+  });
+
+  // Remover a notificação após um tempo
+  setTimeout(() => {
+    notification.remove();
+  }, 4000);
+}
+
+
+// Simulador automático a cada 4 a 12 segundos
+function startNotifications() {
+  setInterval(() => {
+    const randomIndex = Math.floor(Math.random() * notifications.length);
+    showNotification(notifications[randomIndex]);
+  }, Math.random() * (15000 - 5000) + 5000);
+}
+
+function parseCurrencyToFloat(str) {
+  return parseFloat(str.replace(/[R$\.\s]/g, '').replace(',', '.'));
+}
+
+function formatCurrency(value) {
+  return value.toLocaleString('pt-BR', {
+    style: 'currency',
+    currency: 'BRL',
+    minimumFractionDigits: 2
+  });
+}
+
+function animateCounter(element, start, end, duration = 1000) {
+  let startTimestamp = null;
+  const step = (timestamp) => {
+    if (!startTimestamp) startTimestamp = timestamp;
+    const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+    const current = start + (end - start) * progress;
+    element.textContent = formatCurrency(current);
+    if (progress < 1) {
+      window.requestAnimationFrame(step);
+    }
+  };
+  window.requestAnimationFrame(step);
+}
+
+function updateAllTotalDonatedDisplays(donationAmount) {
+  const elements = document.querySelectorAll('.valor-total-doado');
+  elements.forEach(el => {
+    const current = parseCurrencyToFloat(el.textContent);
+    const donation = parseCurrencyToFloat(donationAmount);
+    const newTotal = current + donation;
+    animateCounter(el, current, newTotal);
+  });
+}
+
+
+
+startNotifications();
+</script>
+
+	<header>
+		<div class="container">
+			<div class="content-header d-flex align-items-center justify-content-between">
+				<div class="logo">
+				 <img src="index_files/logo.svg" alt="Vakinha Online"> 
+				</div>
+				<div class="menu-header d-none d-lg-flex d-xl-flex align-items-center">
+					<div class="item-menu"><span>Como ajudar</span><svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium sc-252fa7a3-14 ixtrj css-vubbuv" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="KeyboardArrowDownIcon" width="24" height="24">
+							<path d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6z"></path>
+						</svg></div>
+					<div class="item-menu"><span>Descubra</span><svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium sc-252fa7a3-14 ixtrj css-vubbuv" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="KeyboardArrowDownIcon" width="24" height="24">
+							<path d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6z"></path>
+						</svg></div>
+					<div class="item-menu"><span>Como funciona</span><svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium sc-252fa7a3-14 ixtrj css-vubbuv" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="KeyboardArrowDownIcon" width="24" height="24">
+							<path d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6z"></path>
+						</svg></div>
+					<div class="logArea d-flex align-items-center justify-content-end">
+						<div class="item-menu-busca">
+							<span>Buscar</span>
+							<svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium sc-252fa7a3-15 iZaOBt css-vubbuv" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="SearchRoundedIcon">
+								<path d="M15.5 14h-.79l-.28-.27c1.2-1.4 1.82-3.31 1.48-5.34-.47-2.78-2.79-5-5.59-5.34-4.23-.52-7.79 3.04-7.27 7.27.34 2.8 2.56 5.12 5.34 5.59 2.03.34 3.94-.28 5.34-1.48l.27.28v.79l4.25 4.25c.41.41 1.08.41 1.49 0 .41-.41.41-1.08 0-1.49zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14">
+								</path>
+							</svg>
+						</div>
+						<div class="item-menu-account"><span>Minha conta</span></div>
+						<div class="btn-create">
+							<button type="button" class="btn-create-button">Criar vaquinha</button>
+						</div>
+					</div>
+				</div>
+				<div class="menu-mobile d-flex d-lg-none d-xl-none align-items-center">
+					<div class="busca-mobile"><svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-vubbuv" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="SearchIcon">
+							<path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14">
+							</path>
+						</svg></div>
+					<button class="menu-mobile">
+						<svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium sc-c5ec013-3 bQLvwO bm-icon css-vubbuv" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="NotesIcon" style="width: 100%; height: 100%;">
+							<path d="M3 18h12v-2H3zM3 6v2h18V6zm0 7h18v-2H3z"></path>
+						</svg>
+					</button>
+				</div>
+			</div>
+		</div>
+	</header>
+	<section id="corpo">
+		<div class="container">
+			<div class="topVakinha">
+				<span>SAÚDE / TRATAMENTOS</span>
+				<h1>O sistema disse que ele não tem urgência… Mas ele sente dor todos os dias. </h1>
+				<span>ID: 4507141</span>
+			</div>
+			<div class="detailsVakinha d-flex flex-wrap">
+				<div class="detalhes">
+					<div class="detalhes-view">
+						<div class="galeria swiper-initialized swiper-horizontal swiper-ios swiper-backface-hidden">
+							<div class="swiper-wrapper" id="swiper-wrapper-c182ca65f3d23510f" aria-live="off">
+								<div class="image swiper-slide swiper-slide-active swiper-slide-next" role="group" aria-label="1 / 1" data-swiper-slide-index="0" style="width: 315px;"><img src="banner-lucas.webp"></div>
+							</div>
+							<div class="galeria-pagination swiper-pagination-bullets swiper-pagination-horizontal swiper-pagination-lock"><span class="swiper-pagination-bullet swiper-pagination-bullet-active" aria-current="true"></span></div>
+							<span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+						</div>
+						<div class="sc-jXbUNg jeWFMw">
+							<ul class="sc-46fe23d1-0 haSOVG">
+								<li class="sc-46fe23d1-1 gNSeDc"><img class="sc-ad44238c-0 bFFsjk sc-46fe23d1-2 lgcmt" src="index_files/avs.svg"></li>
+								<li class="sc-46fe23d1-1 gNSeDc"><img class="sc-ad44238c-0 bFFsjk sc-46fe23d1-2 lgcmt" src="index_files/perfil.png"></li>
+								<li class="sc-46fe23d1-1 gNSeDc"><img class="sc-ad44238c-0 bFFsjk sc-46fe23d1-2 lgcmt" src="index_files/imm.svg"></li>
+								<li class="sc-46fe23d1-1 gNSeDc"><img class="sc-ad44238c-0 bFFsjk sc-46fe23d1-2 lgcmt" src="index_files/lo.webp"></li>
+								<li class="sc-46fe23d1-1 gNSeDc"><img class="sc-ad44238c-0 bFFsjk sc-46fe23d1-2 lgcmt" src="index_files/kc.webp"></li>
+								<li class="sc-46fe23d1-1 gNSeDc">
+									<section class="sc-46fe23d1-3 jLFjnt">+</section>
+								</li>
+							</ul>
+							<div class="sc-jXbUNg kaMzRM">
+								<span class="sc-fqkvVR ivmFdA"><span id="coracoes">279</span> corações recebidos</span>
+								<div class="sc-jXbUNg iVMVsL">
+									<svg id="___SVG_ID__1__31___" data-name="Grupo 1248" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 18.319 15.34">
+										<defs>
+											<radialgradient id="___SVG_ID__1__0___" cx="0.298" cy="0.5" r="1.023" gradientTransform="matrix(0.853, 0, 0, -1, 0.003, 2)" gradientUnits="objectBoundingBox">
+												<stop offset="0" stop-color="#24ca68"></stop>
+												<stop offset="0.704" stop-color="#0a8f51"></stop>
+												<stop offset="1" stop-color="#007a48"></stop>
+											</radialgradient>
+											<clippath id="___SVG_ID__1__2___">
+												<rect id="___SVG_ID__1__1___" data-name="Retângulo 417" width="3.582" height="2.246" fill="#fff"></rect>
+											</clippath>
+											<clippath id="___SVG_ID__1__4___">
+												<path id="___SVG_ID__1__3___" data-name="Caminho 602" d="M13.13,1.456A3.588,3.588,0,0,0,10.768,3.11c-.126.207-.156.412-.086.5s.228.044.461-.078c.341-.18.873-.5,1.368-.75a6.142,6.142,0,0,1,1.03-.419c.953-.257,1-1.187-.41-.9" transform="translate(-10.645 -1.403)" fill="#fff" clip-rule="evenodd"></path>
+											</clippath>
+											<clippath id="___SVG_ID__1__6___">
+												<rect id="___SVG_ID__1__5___" data-name="Retângulo 419" width="4.227" height="4.294" fill="#fff"></rect>
+											</clippath>
+											<clippath id="___SVG_ID__1__8___">
+												<path id="___SVG_ID__1__7___" data-name="Caminho 603" d="M3.39,1.333A2.985,2.985,0,0,0,1.17,3.154a.537.537,0,0,0,.02.545c.092.088.26.05.489-.086.334-.2.847-.551,1.333-.825a5.4,5.4,0,0,1,1.037-.46c.989-.283.831-1.307-.658-1M.461,4.7c-.072.406.149,1.22.514.7A2.914,2.914,0,0,0,1.3,4.753a.582.582,0,0,0-.167-.631c-.421-.271-.625.3-.675.579" transform="translate(-0.447 -1.275)" fill="#fff" clip-rule="evenodd"></path>
+											</clippath>
+											<clippath id="___SVG_ID__1__10___">
+												<rect id="___SVG_ID__1__9___" data-name="Retângulo 415" width="8.687" height="4.274"></rect>
+											</clippath>
+											<clippath id="___SVG_ID__1__12___">
+												<path id="___SVG_ID__1__11___" data-name="Caminho 601" d="M7.878,4.086a16.6,16.6,0,0,1,1.362-1.9A5.646,5.646,0,0,0,3.255.242a4.376,4.376,0,0,0-2.7,2.514C2.37-.562,7.8.568,7.635,3.414a3.858,3.858,0,0,1-.05.519c-.038.194-.045.3.027.334s.178-.03.265-.18" transform="translate(-0.553 0)" clip-rule="evenodd"></path>
+											</clippath>
+										</defs>
+										<path id="___SVG_ID__1__13___" data-name="Caminho 597" d="M9.16,2.184A5.647,5.647,0,0,0,3.174.242C.695,1.027-.329,3.754.092,6.165c.667,3.826,4.845,7.644,8.459,9.055a1.678,1.678,0,0,0,.6.12h.032a1.633,1.633,0,0,0,.59-.12c3.649-1.445,7.792-5.229,8.46-9.055a6.259,6.259,0,0,0,.091-1.012V5.048A4.864,4.864,0,0,0,15.145.242,5.119,5.119,0,0,0,13.6,0,5.855,5.855,0,0,0,9.16,2.184" transform="translate(0 0)" fill="url(#___SVG_ID__1__0___)"></path>
+										<g id="___SVG_ID__1__19___" data-name="Grupo 930" transform="translate(9.891 1.103)" opacity="0.28" style="isolation: isolate;">
+											<g id="___SVG_ID__1__18___" data-name="Grupo 915">
+												<g id="___SVG_ID__1__17___" data-name="Grupo 914" clip-path="url(#___SVG_ID__1__2___)">
+													<g id="___SVG_ID__1__16___" data-name="Grupo 913" transform="translate(0 0)">
+														<g id="___SVG_ID__1__15___" data-name="Grupo 912" clip-path="url(#___SVG_ID__1__4___)">
+															<rect id="___SVG_ID__1__14___" data-name="Retângulo 416" width="3.93" height="2.512" transform="translate(-0.033 -0.23)" fill="#fff"></rect>
+														</g>
+													</g>
+												</g>
+											</g>
+										</g>
+										<g id="___SVG_ID__1__24___" data-name="Grupo 920" transform="translate(0.584 1.103)" opacity="0.28" style="isolation: isolate;">
+											<g id="___SVG_ID__1__23___" data-name="Grupo 919" clip-path="url(#___SVG_ID__1__6___)">
+												<g id="___SVG_ID__1__22___" data-name="Grupo 918" transform="translate(0 0)">
+													<g id="___SVG_ID__1__21___" data-name="Grupo 917" clip-path="url(#___SVG_ID__1__8___)">
+														<rect id="___SVG_ID__1__20___" data-name="Retângulo 418" width="4.649" height="4.899" transform="translate(-0.058 -0.253)" fill="#fff"></rect>
+													</g>
+												</g>
+											</g>
+										</g>
+										<path id="___SVG_ID__1__25___" data-name="Caminho 608" d="M10.359,1.461C12.487-.128,15.237,1,16.478,2.813a6.087,6.087,0,0,1,.628,5.262c-.919,2.99-4.948,5.935-7.435,6.082-1.9.113-4.081-1.152-6.184-2.808A16.06,16.06,0,0,0,9.062,15.22a1.6,1.6,0,0,0,1.216,0c3.649-1.445,7.792-5.228,8.46-9.055.42-2.411-.6-5.138-3.083-5.924a5.54,5.54,0,0,0-5.3,1.22" transform="translate(-0.511 0)" fill-rule="evenodd" opacity="0.1" style="mix-blend-mode: multiply; isolation: isolate;"></path>
+										<g id="___SVG_ID__1__30___" data-name="Grupo 910" transform="translate(0.467 0)" opacity="0.1" style="mix-blend-mode: multiply; isolation: isolate;">
+											<g id="___SVG_ID__1__29___" data-name="Grupo 909" clip-path="url(#___SVG_ID__1__10___)">
+												<g id="___SVG_ID__1__28___" data-name="Grupo 908" transform="translate(0 0)">
+													<g id="___SVG_ID__1__27___" data-name="Grupo 907" clip-path="url(#___SVG_ID__1__12___)">
+														<rect id="___SVG_ID__1__26___" data-name="Retângulo 414" width="8.688" height="4.87" transform="translate(0 -0.574)">
+														</rect>
+													</g>
+												</g>
+											</g>
+										</g>
+									</svg>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="resumo-mobile sticker d-block d-lg-none d-xl-none">
+						<div class="perfil d-flex">
+							<div class="avatar">
+								<img src="index_files/perfil.png" alt="Vakinha do Amor do Amor Pet">
+							</div>
+							<div class="dadosPerfil">
+								<h3>Vakinha do Amor</h3>
+								<span class="ativo">Ativo(a) no Vakinha desde março/2025</span>
+								<span class="vakinhas">12 vaquinhas criadas <div class="bullet"></div> 1 vaquinha apoiada</span>
+							 
+							</div>
+						</div>
+						<div class="progresso-mobile d-flex align-items-center">
+							<div class="porcentagem"><span id="porcentagem">79%</span></div>
+							<div class="barra">
+								<div class="barraParcial" id="barraMobile" style="width: 79.9448%;"></div>
+							</div>
+						</div>
+						<div class="arrecadacaoMobile">
+							<strong class="valor-total-doado" id="valorMobile">R$&nbsp;56.554,85</strong> de <span>R$ 80.000,00</span>
+						</div>
+					</div>
+					<div class="menu-detalhes">
+						<ul>
+							<li class="active">Sobre</li>
+						 
+						</ul>
+					</div>
+					<div class="show-sobre">
+						<span class="inicio"><strong>Vaquinha criada em:</strong> 09/03/2025</span>
+						<p><b>Ajude Lucas, ele precisa de você!</b></p>
+						
+						<p>Meu nome é Ana Paula e eu moro em Goiânia, no estado de Goiás. Eu sou mãe do Lucas, e desde que ele nasceu, o Lucas foi a criança mais cheia de vida que eu já vi. Ele corria pela casa o dia inteiro, fazia bagunça, dava risada de qualquer besteira. Se alguém tava triste, ele dava um jeito de arrancar um sorriso. Inventava uma história engraçada, fazia careta, até tropeçava de propósito só pra ver a gente rir. Era impossível ficar triste perto dele. Mas agora… ele não corre mais. Ele não brinca mais. A única coisa que ele consegue fazer é chorar baixinho e pedir para a dor parar. O diagnóstico que destruiu minha vida Lucas foi diagnosticado com Leucemia Linfóide do Tipo T.</p><br>
+						
+						<button type="button" onclick="openModal()" class="btn-ajudar btn-ajuda-maxima">Quero Ajudar 💖</button>
+						
+						<br><br>
+						
+						
+						<p>Um câncer agressivo que ataca as células do sangue e se espalha rapidamente pelo corpo. Os médicos disseram que o tratamento dele existe, mas o SUS se recusou a fornecer. Sabe por quê? Porque colocaram o caso dele como "baixa prioridade". Sim… Um menino de 6 anos, que precisa de morfina para dormir, foi considerado sem urgência pelo sistema público de saúde. Eu tentei de tudo. Mas ninguém quis ajudar. Agora, meu filho está deitado numa cama, com dor todos os dias, esperando um tratamento que não vai chegar a tempo.</p><br>
+						
+						<p>Transparência total: Cada centavo doado será gasto com: Compra dos medicamentos (Nelarabina e Velcade) Consultas médicas especializadas Exames laboratoriais e de imagem Transporte para deslocamento até a clínica Internações e suporte hospitalar Qualquer doação acima do valor necessário será destinada ao GRAAC outras crianças na mesma situação que o Lucas. E é por isso que eu estou aqui, de coração aberto, pedindo a sua ajuda. Eu não sou uma mulher rica.</p><br>
+						
+							<button type="button" onclick="openModal()" class="btn-ajudar btn-ajuda-maxima">Quero Ajudar 💖</button>
+						
+						<br><br>
+						
+						<b>Eu não tenho como pagar esse tratamento sozinha. Eu já vendi tudo que eu tinha: o carro, os móveis, até minhas alianças de casamento. Mas ainda falta muito. Eu estou pedindo porque é a vida do meu filho que está em jogo. Se eu não conseguir esse dinheiro, o Lucas pode não chegar ao próximo Natal. E eu não consigo aceitar isso. Por isso, eu te imploro: Se você pode doar, faça isso agora. Seja R$ 50, R$ 100 ou mais, cada doação aproxima o Lucas da chance de viver. Eu não acredito que você tenha chegado até aqui por acaso.</b><br><br>
+						
+ 					 
+						<p>Ajudar o Lucas é simples:<br> ✔️ Clique no botão “Quero Ajudar”.<br> ✔️ Escolha o valor que deseja doar. <br>✔️ Você será direcionado para a próxima etapa, onde poderá efetuar a doação via PIX. Cada doação, por menor que seja, faz uma grande diferença. Todo o valor arrecadado é para garantir o tratamento de Lucas. Podemos contar com vocês?</p><br>
+						
+							<button type="button" onclick="openModal()" class="btn-ajudar btn-ajuda-maxima">Quero Ajudar 💖</button>
+						
+						<br><br>
+						
+						<b>Se você não puder doar, por favor, compartilhe a história de Lucas para que mais pessoas à conheçam.</b><br>
+						<p>Clique no botão "QUERO AJUDAR" abaixo e transforme sua empatia em ação.
+ 
+A sua generosidade pode mudar tudo. Obrigado por fazer parte dessa luta. ❤️</p>
+					</div>
+					<div class="plugin-facebook">
+						<div class="box-comentarios-face facebook-comments">
+							<div class="content-box">
+								<h4>Mostrando 6 Comentários</h4>
+								<div class="comentario">
+									<div class="content-comentario">
+										<div class="avatar">
+											<img src="index_files/icon.png" alt="Ana Clara">
+										</div>
+										<div class="text-comentario">
+											<h3>Letícia Soares</h3>
+											<p>Doei R$200,00 espero que ajude</p>
+											<div class="d-flex align-items-center">
+												<span>Responder</span><span>Curtir</span><span>Seguir</span><span>3 min</span>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="comentario">
+									<div class="content-comentario">
+										<div class="avatar">
+											<img src="index_files/pedro_henrique.webp" alt="Pedro Henrique">
+										</div>
+										<div class="text-comentario">
+											<h3>Pedro Vinicius</h3>
+											<p>A família de Lucas é próxima à mim, são muito cuidadosos. Que Deus os abençoe</p>
+											<div class="d-flex align-items-center">
+												<span>Responder</span><span>Curtir</span><span>Seguir</span><span>5 min</span>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="comentario">
+									<div class="content-comentario">
+										<div class="avatar">
+											<img src="index_files/cicera.webp" alt="Cicera Rodrigues">
+										</div>
+										<div class="text-comentario">
+											<h3>Jéssica Santos</h3>
+											<p>Vou incluir Lucas nas minhas orações! Contribui com R$150,00 de coração 💖</p>
+											<div class="d-flex align-items-center">
+												<span>Responder</span><span>Curtir</span><span>Seguir</span><span>9 min</span>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="comentario">
+									<div class="content-comentario">
+										<div class="avatar">
+											<img src="index_files/icon.png" alt="Meire Fonseca">
+										</div>
+										<div class="text-comentario">
+											<h3>Maria Carma</h3>
+											<p>A história de Lucas cortou o meu coração. Que Deus cuide desse anjinho, eu fiz a minha doação.</p>
+											<div class="d-flex align-items-center">
+												<span>Responder</span><span>Curtir</span><span>Seguir</span><span>14 min</span>
+											</div>
+										</div>
+									</div>
+									<div class="respostas-comentarios">
+										<div class="comentario">
+											<div class="content-comentario">
+												<div class="avatar">
+													<img src="index_files/gabriela.webp" alt="Gabriela Oliveira">
+												</div>
+												<div class="text-comentario">
+													<h3>Gabriela Silva</h3>
+													<p>Aqui eu também ajudei com 200 reais, queria poder doar um pouco mais 😓 </p>
+													<div class="d-flex align-items-center">
+														<span>Responder</span><span>Curtir</span><span>Seguir</span><span>6 min</span>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="comentario">
+											<div class="content-comentario">
+												<div class="avatar">
+													<img src="index_files/leticia.webp" alt="Letícia Mara">
+												</div>
+												<div class="text-comentario">
+													<h3>Letícia Elisângela</h3>
+													<p>Todo mundo deveria ajudar, nenhuma criança merece passar por isso</p>
+													<div class="d-flex align-items-center">
+														<span>Responder</span><span>Curtir</span><span>Seguir</span><span>1 min</span>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<p class="final">Você precisa estar logado para comentar.</p>
+						</div>
+					</div>
+				</div>
+				<div class="resumo">
+					<div class="sticker-resumo">
+						<div class="progresso">
+							<div class="barra-geral">
+								<div class="barraTotal">
+									<div class="barraParcial" id="barra" style="width: 38.9448%;"></div>
+								</div>
+							</div>
+						</div>
+						<div class="arrecadado">
+							<span>Arrecadado</span>
+							<h2 id="doado">R$&nbsp;56.554,85</h2>
+						</div>
+						<div class="meta">
+							<span>Meta</span>
+							<span>R$ 80.000,00</span>
+						</div>
+						<div class="apoiadores">
+							<span>Apoiadores</span>
+							<span id="apoiadores">994</span>
+						</div>
+						<div class="acao">
+							<button type="button" onclick="openModal()" class="btn-ajudar">Quero Ajudar</button>
+						</div>
+						<div class="perfil d-flex">
+							<div class="avatar">
+								<img src="index_files/perfil.png" alt="Vakinha do Amor do Amor Pet">
+							</div>
+							<div class="dadosPerfil">
+								<h3>Vakinha do Amor</h3>
+								<span class="ativo">Ativo(a) no Vakinha desde março/2025</span>
+								<span class="vakinhas">12 vaquinhas criadas <div class="bullet"></div> 3 vaquinhas apoiadas</span>
+								<a href="index.html#">Leia mais</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section style="display:none;" id="fixed-mobile" class="d-block d-lg-none d-xl-none">
+		<button type="button" onclick="openModal()" class="btn-ajudar">Quero Ajudar 💖</button>
+	</section>
+	<footer>
+		<div class="aviso">
+			<div class="container">
+				<span>AVISO LEGAL: O texto e as imagens incluídos nessa página são de única e exclusiva responsabilidade do criador da vaquinha e não representam a opinião ou endosso da plataforma Vakinha.</span>
+			</div>
+		</div>
+		<div class="container">
+			<div class="content-footer">
+				<div class="topFooter d-flex align-items-center justify-content-between">
+					<div class="logo-rodape">
+						<img src="index_files/logo_rodape.svg" alt="logo-rodape">
+					</div>
+					<div class="sociais">
+						<ul class="d-flex align-items-center">
+							<li><a href="index.html#"><svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-vubbuv" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="InstagramIcon">
+										<path d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4H7.6m9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8 1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3z">
+										</path>
+									</svg></a></li>
+							<li>
+								<div class="separador"></div>
+							</li>
+							<li><a href="index.html#"><svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-vubbuv" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="FacebookIcon">
+										<path d="M5 3h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2m13 2h-2.5A3.5 3.5 0 0 0 12 8.5V11h-2v3h2v7h3v-7h3v-3h-3V9a1 1 0 0 1 1-1h2V5z">
+										</path>
+									</svg></a></li>
+							<li>
+								<div class="separador"></div>
+							</li>
+							<li><a href="index.html#"><svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-vubbuv" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="YouTubeIcon">
+										<path d="M10 15l5.19-3L10 9v6m11.56-7.83c.13.47.22 1.1.28 1.9.07.8.1 1.49.1 2.09L22 12c0 2.19-.16 3.8-.44 4.83-.25.9-.83 1.48-1.73 1.73-.47.13-1.33.22-2.65.28-1.3.07-2.49.1-3.59.1L12 19c-4.19 0-6.8-.16-7.83-.44-.9-.25-1.48-.83-1.73-1.73-.13-.47-.22-1.1-.28-1.9-.07-.8-.1-1.49-.1-2.09L2 12c0-2.19.16-3.8.44-4.83.25-.9.83-1.48 1.73-1.73.47-.13 1.33-.22 2.65-.28 1.3-.07 2.49-.1 3.59-.1L12 5c4.19 0 6.8.16 7.83.44.9.25 1.48.83 1.73 1.73z">
+										</path>
+									</svg></a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="content d-flex justify-content-between">
+					<div class="aba aba-links">
+						<h4>Links rápidos</h4>
+						<ul>
+							<li><a href="index.html#">Quem somos</a></li>
+							<li><a href="index.html#">Vaquinhas</a></li>
+							<li><a href="index.html#">Criar vaquinhas</a></li>
+							<li><a href="index.html#">Login</a></li>
+							<li><a href="index.html#">Vaquinhas mais amadas</a></li>
+							<li><a href="index.html#">Política de privacidade</a></li>
+							<li><a href="index.html#">Termos de uso</a></li>
+						</ul>
+					</div>
+					<div class="aba aba-links">
+						<h4></h4>
+						<ul>
+							<li><a href="index.html#">Dúvidas frequentes</a></li>
+							<li><a href="index.html#">Taxas e prazos</a></li>
+							<li><a href="index.html#">Loja de corações</a></li>
+							<li><a href="index.html#">Vakinha Premiada</a></li>
+							<li><a href="index.html#">Blog do Vakinha</a></li>
+							<li><a href="index.html#">Segurnaça e transparência</a></li>
+							<li><a href="index.html#">Busca por recibo</a></li>
+						</ul>
+					</div>
+					<div class="aba aba-links">
+						<h4>Fale conosco</h4>
+						<ul>
+							<li><a href="index.html#">Clique aqui para falar conosco</a></li>
+						</ul>
+						<ul>
+							<li style="padding: 0 !important;"><span>De Segunda à Sexta</span></li>
+							<li><span>Das 9:30 às 17:00</span></li>
+							<li class="d-none d-lg-block d-xl-block"><img src="index_files/selo_seguranca.webp" alt="Selo de Segurança"></li>
+						</ul>
+					</div>
+					<div class="aba aba-links d-flex d-lg-none d-xl-none">
+						<ul>
+							<li style="text-align: right;"><img src="index_files/selo_seguranca.webp" alt="Selo de Segurança" width="86"></li>
+						</ul>
+					</div>
+					<div class="aba aba-links">
+						<h4>Baixe nosso App</h4>
+						<ul>
+							<li style="padding-bottom: 12px !important;"><a href="index.html#"><img src="index_files/google_play.svg" alt="Google Play Store"></a></li>
+							<li><a href="index.html#"><img src="index_files/apple_store.svg" alt="Apple Store"></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="copyright">
+			<span>2025 - Todos direitos reservados</span>
+		</div>
+	</footer>
+	<div class="modal modal-doar">
+		<div class="fora-modal"></div>
+		<div class="content-modal">
+			<div class="modal modal-doar">
+				<div class="fora-modal"></div>
+				<div class="content-modal">
+					<div class="close-modal"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="14" height="14" x="0" y="0" viewBox="0 0 320.591 320.591" style="enable-background:new 0 0 512 512" xml:space="preserve" class="">
+							<g>
+								<path d="M30.391 318.583a30.37 30.37 0 0 1-21.56-7.288c-11.774-11.844-11.774-30.973 0-42.817L266.643 10.665c12.246-11.459 31.462-10.822 42.921 1.424 10.362 11.074 10.966 28.095 1.414 39.875L51.647 311.295a30.366 30.366 0 0 1-21.256 7.288z" fill="#ffffff" opacity="1" data-original="#000000" class=""></path>
+								<path d="M287.9 318.583a30.37 30.37 0 0 1-21.257-8.806L8.83 51.963C-2.078 39.225-.595 20.055 12.143 9.146c11.369-9.736 28.136-9.736 39.504 0l259.331 257.813c12.243 11.462 12.876 30.679 1.414 42.922-.456.487-.927.958-1.414 1.414a30.368 30.368 0 0 1-23.078 7.288z" fill="#ffffff" opacity="1" data-original="#000000" class=""></path>
+							</g>
+						</svg></div>
+					<h2>Qual valor deseja doar?</h2>
+					<div class="valores d-flex align-items-center justify-content-between flex-wrap">
+						<a href="https://pay.risepay.com.br/Pay/a5dca5956b314403a596aef2708897a1" target="_blank">R$ 25,00</a>
+						<a href="https://pay.risepay.com.br/Pay/dd54d562721e45e3a8b4a79dd8db911c" target="_blank">R$ 40,00</a>
+						<a href="https://pay.risepay.com.br/Pay/441cd387cf08456680fb15dd81b199d6" target="_blank">R$ 50,00</a>
+						<a href="https://pay.risepay.com.br/Pay/2154145f419e45c2971d039356af2cc6" target="_blank">R$ 100,00</a>
+						<a href="https://pay.risepay.com.br/Pay/a5526f89e2314f5a8258285ac7be459b" target="_blank">R$ 150,00</a>
+						<a href="https://pay.risepay.com.br/Pay/c3b1bf52788a487dbc05bf84cb0a8322" target="_blank">R$ 200,00</a>
+						<a href="https://pay.risepay.com.br/Pay/2e0de92d19774e63b6c0ac829734a855" target="_blank">R$ 250,00</a>
+						<a href="https://pay.risepay.com.br/Pay/bff2bd7c43a745bdb420d1be11460db3" target="_blank">R$ 300,00</a>
+						<a href="https://pay.risepay.com.br/Pay/f45e6964c73748a28b10b7b775298c23" target="_blank">R$ 500,00</a>
+						<div class="switch-container">
+							<div class="switch-info">
+								<span>Fazer doação anônima</span>
+								<button class="info-button" aria-label="Informação"></button>
+							</div>
+							<label class="toggle-switch">
+								<input type="checkbox">
+								<span class="slider"></span>
+							</label>
+						</div>
+					</div>
+				</div>
+			</div>
+ 
+		</div>
+	</div>
+
+
+	<script
+  src="https://cdn.utmify.com.br/scripts/utms/latest.js"
+  data-utmify-prevent-xcod-sck
+  data-utmify-prevent-subids
+  async
+  defer
+></script>
+
+<style>
+        /* Overlay */
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+        }
+
+        /* Modal */
+        .modal-content {
+            background: white;
+            width: 90%;
+            max-width: 400px;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            position: relative;
+        }
+
+        /* Cabeçalho */
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .modal-header .close-modal {
+            cursor: pointer;
+            font-size: 18px;
+        }
+
+        /* Barra de progresso */
+        .progress-bar {
+            width: 100%;
+            height: 5px;
+            background: #ccc;
+            border-radius: 3px;
+            margin-bottom: 15px;
+            position: relative;
+        }
+
+        .progress-fill {
+            width: 55%;
+            height: 100%;
+            background: rgb(36, 202, 104);
+            border-radius: 3px;
+        }
+
+        /* Títulos */
+        .modal-content h2 {
+            font-size: 16px;
+            margin-bottom: 15px;
+        }
+
+        .modal-content p {
+            font-size: 14px;
+            color: #333;
+        }
+ .cor-destaque{
+            background-color: rgb(0 197 59)!important;
+        }
+
+        /* Botões de Doação */
+        .donation-buttons {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+        }
+		.label-destaque {
+		font-size: 0.75rem; /* texto pequeno */
+		margin-bottom: 4px;  /* gruda no botão */
+		color: #24CA68;      /* mesma cor do botão, pode ajustar */
+		font-weight: 500;
+	}
+	
+    .botao-destaque {
+        grid-column: span 3;
+        position: relative;
+    }
+    
+    .selo-destaque {
+        position: absolute;
+        top: -8px;
+        right: -8px;
+        background: #EB4C60;
+        color: white;
+        font-size: 0.7rem;
+        font-weight: bold;
+        padding: 4px 8px;
+        border-radius: 20px;
+        box-shadow: 0 1px 4px rgba(0,0,0,0.2);
+        z-index: 2;
+    }
+
+	
+
+        .donation-buttons a {
+            display: block;
+            background: #0987D2;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 12px 0;
+            border-radius: 8px;
+            text-align: center;
+            transition: 0.3s;
+        }
+
+        .donation-buttons a:hover {
+            background: #24CA68;
+        }
+    </style>
+
+<!-- Modal -->
+<div id="donation-modal" class="modal-overlay">
+        <div class="modal-content">
+            <div class="modal-header" style="font-family: 'Poppins';">
+                 
+                 
+            </div>
+            <div class="modal-header">
+                
+            </div>
+            
+           <div class="progresso-mobile d-flex align-items-center">
+							<div class="porcentagem"><span id="porcentagem">79%</span></div>
+							<div class="barra">
+								<div class="barraParcial" id="barraMobile" style="width: 79.9448%;"></div>
+							</div>
+						</div>
+
+<div class="arrecadacaoMobile">
+							<strong class="valor-total-doado" id="valorMobile">R$&nbsp;56.554,85</strong> de <span>R$ 80.000,00</span>
+						</div>
+						<br>
+						
+          <h2><b>Faça parte dessa corrente do bem, Lucas precisa de você! 💚</b></h2><br>
+
+            <!-- Botões de doação -->
+ 			        <!-- Botões de doação -->
+     			<div class="donation-buttons">
+            <a class="elementoGeracao" href="https://pay.risepay.com.br/Pay/ef0ccc32266849ce8b14c1acbdabbc86" target="_blank" data-valor="30">R$ 30,00</a>
+            <a class="elementoGeracao" href="https://pay.risepay.com.br/Pay/441cd387cf08456680fb15dd81b199d6" target="_blank" data-valor="50">R$ 50,00</a>
+            <a class="elementoGeracao" href="https://pay.risepay.com.br/Pay/2154145f419e45c2971d039356af2cc6" target="_blank" data-valor="100">R$ 100,00</a>
+
+
+
+   <div class="botao-destaque pulse">
+    <span class="selo-destaque">Mais escolhido</span>
+    <a class="elementoGeracao cor-destaque" href="https://pay.risepay.com.br/Pay/a5526f89e2314f5a8258285ac7be459b" target="_blank" data-valor="150">R$ 150,00</a>
+</div>
+
+
+    <!-- Outros botões seguem normalmente -->
+    <a class="elementoGeracao" href="https://pay.risepay.com.br/Pay/c3b1bf52788a487dbc05bf84cb0a8322" target="_blank" data-valor="200">R$ 200,00</a>
+    <a class="elementoGeracao" href="https://pay.risepay.com.br/Pay/2e0de92d19774e63b6c0ac829734a855" target="_blank" data-valor="250">R$ 250,00</a>
+    <a class="elementoGeracao" href="https://pay.risepay.com.br/Pay/f45e6964c73748a28b10b7b775298c23" target="_blank" data-valor="500">R$ 500,00</a>
+    
+      <div class="botao-destaque">
+        <a class="elementoGeracao" href="https://pay.risepay.com.br/Pay/18b20a90c8564fc1b266c312b3d2d03d" target="_blank" data-valor="1000">R$ 1.000,00</a>
+            R$ 1.000,00 💗
+        </a>
+    </div>
+		 
+
+        </div>
+    </div>
+
+
+
+	<script>
+        // Função para abrir o modal
+        function openModal() {
+            document.getElementById("donation-modal").style.display = "flex";
+        }
+
+        // Função para fechar o modal
+        function closeModal() {
+            document.getElementById("donation-modal").style.display = "none";
+        }
+
+        // Fecha o modal ao clicar fora dele
+        window.onclick = function(event) {
+            let modal = document.getElementById("donation-modal");
+            if (event.target === modal) {
+                closeModal();
+            }
+        }
+    </script>
+
+<script>
+		document.addEventListener('DOMContentLoaded', function() {
+			// Seleciona todos os elementos com a classe 'elementoGerar'
+			var elementos = document.querySelectorAll('.elementoGeracao');
+		
+			// Adiciona um event listener para cada elemento
+			elementos.forEach(function(elemento) {
+				elemento.addEventListener('click', function() {
+					// Encontra a div 'gerando-contribuicao' e altera o display para 'flex'
+					var div = document.querySelector('.gerando-contribuicao');
+					var divModal = document.querySelector('.modal-overlay');
+
+					div.style.display = 'flex';
+					divModal.style.display = 'none';
+				});
+			});
+		});
+		</script>
+
+	
+
+	<script>
+    // Função para abrir o modal com os valores corretos
+    function abrirModal(valorEscolhido) {
+        const overlay = document.getElementById("overlay-doador");
+        const valorAdicional = document.getElementById("valor-adicional");
+        const mensagemDoacao = document.getElementById("mensagem-doacao");
+        const botaoDoacaoExtra = document.getElementById("botao-doacao-extra");
+        const botaoDoacaoManutencao = document.getElementById("botao-doacao-manutencao");
+		document.querySelectorAll(".modal-overlay").forEach(modal => {
+			modal.style.display = "none";
+		});
+
+
+        console.log("Valor Escolhido:", valorEscolhido); // Debug
+
+        // Converte valorEscolhido para número (caso venha como string)
+        valorEscolhido = parseInt(valorEscolhido, 10);
+
+        // Lógica para definir valor adicional sugerido
+        let valorExtra;
+        if (valorEscolhido === 30) {
+            valorExtra = 20;
+        }
+		else if (valorEscolhido === 40) {
+            valorExtra = 20;
+        }  else if (valorEscolhido === 50) {
+
+            valorExtra = 20;
+        } else if (valorEscolhido === 70) {
+            valorExtra = 30;
+        } else if ([100, 150, 200].includes(valorEscolhido)) {
+            valorExtra = 50;
+        } else {
+            valorExtra = 50;
+        }
+
+        const novoValor = valorEscolhido + valorExtra;
+
+        // Atualizando o modal com os valores
+        valorAdicional.innerText = `R$${valorExtra}`;
+        mensagemDoacao.innerText = `Considere doar R$${novoValor} e fazer ainda mais diferença.`;
+        botaoDoacaoExtra.href = `gerar-pix.php?value=${novoValor}`;
+        botaoDoacaoExtra.innerText = `SIM, QUERO DOAR R$${novoValor}`;
+        botaoDoacaoManutencao.href = `gerar-pix.php?value=${valorEscolhido}`;
+        botaoDoacaoManutencao.innerText = `Quero continuar doando R$${valorEscolhido}`;
+
+        // Exibir o modal
+        overlay.style.display = "flex";
+    }
+
+	function fecharModal() {
+        document.getElementById("overlay-doador").style.display = "none";
+    }
+
+    // Fechar o modal ao clicar no botão X
+    document.getElementById("fechar-modal").addEventListener("click", fecharModal);
+
+    // Fechar o modal ao clicar no overlay
+    document.getElementById("overlay-doador").addEventListener("click", function (event) {
+        if (event.target === this) {
+            fecharModal();
+        }
+    });
+
+    // Adiciona evento de clique aos botões de doação
+    document.querySelectorAll(".elementoGerar").forEach(botao => {
+        botao.addEventListener("click", function(event) {
+            event.preventDefault(); // Evita a navegação direta pelo link
+            
+            const valor = this.getAttribute("data-valor"); // Pega o valor do data-valor
+            abrirModal(valor);
+        });
+    });
+
+
+</script>
+
+
+ </body>
+
+</html>
